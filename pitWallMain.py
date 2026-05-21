@@ -2,6 +2,9 @@
 import pandas as pd
 from pynascar import Schedule, Race, set_options, get_settings
 from pynascar.driver import DriversData
+import numpy as np
+import matplotlib.pyplot as plt
+
 
 # Enable local caching for faster repeated runs
 set_options(cache_enabled=True, cache_dir=".cache/", df_format="parquet")
@@ -48,9 +51,10 @@ loop_table_sorted = loop_data.sort_values('driver_id')
 race.telemetry.events['Lap'] = pd.to_numeric(race.telemetry.events['Lap'], errors='coerce')
 race_events = race.telemetry.events[race.telemetry.events['Lap'] > 0]
 events_table_sorted = race_events.sort_values('Lap')
-print(events_table_sorted)
 
-#  Driver season aggregates
-# dd = DriversData.build(2025, 1, use_cache_only=False)
-# summary = dd.to_dataframe()
-# summary.sort_values("season_avg_position").head()
+green_laps = race.telemetry.events.loc[
+    race.telemetry.events['Flag'] == 'Green',
+    ['Lap']
+]
+
+print(green_laps)

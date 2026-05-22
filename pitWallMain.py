@@ -57,4 +57,9 @@ green_laps = race.telemetry.events.loc[
     ['Lap']
 ]
 
-print(green_laps)
+pit_stops = race.telemetry.pit_stops.loc[
+    race.telemetry.pit_stops['driver_name'] == 'Denny Hamlin',
+    ['lap']
+]
+
+print(pit_stops)

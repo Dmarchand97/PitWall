@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Enable local caching for faster repeated runs
-set_options(cache_enabled=True, cache_dir=".cache/", df_format="parquet")
+set_options(cache_enabled=True, cache_dir="data/.cache/", df_format="parquet")
 
 # Series: 1=Cup, 2=Xfinity, 3=Trucks
 year = 2025

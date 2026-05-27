@@ -4,8 +4,8 @@
 - [x ] Inspect each DataFrame (lap_times, pit_stops, cautions, lead_changes, results)
 - [x ] Plot lap-time distributions — green-flag laps cluster around one peak, pit-stop and caution laps form a long right tail
 - [x ] Plot a full lap-time-by-lap timeline to see the race shape (cautions, pit cycles, lead battles)
-- [ ] Identify outliers, nulls, weird values — note them
-- [ ] Build a "data dictionary" for your future self: what each column means in your terms, not pynascar's
+- [x ] Identify outliers, nulls, weird values — note them
+- [x ] Build a "data dictionary" for your future self: what each column means in your terms, not pynascar's
 
 ## 2. Build Foundational Sub-Models
 Each becomes a probability distribution that feeds into the Monte Carlo engine.
